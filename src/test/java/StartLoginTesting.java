@@ -30,5 +30,8 @@ public class StartLoginTesting {
         loginWithPOM.setGender();
         loginWithPOM.setPhoneNumber("0123456789");
         loginWithPOM.setDate("22 May 1982");
+        loginWithPOM.setSubject("English");
+        loginWithPOM.setSubject("Chemistry");
+        loginWithPOM.setSubject("Computer Science");
     }
 }

@@ -14,7 +14,7 @@ public class TestLoginWithPOM {
 
     By uploadPicture = By.id("uploadPicture");
     By day = By.id("dateOfBirthInput");
-    By subject = By.id("subjectsInput");
+    By subjectField = By.id("subjectsInput");
     By gender = By.xpath("(//input[@name='gender'])[2]");
     By sport = By.id("hobbies-checkbox-1");
     By reading = By.id("hobbies-checkbox-2");
@@ -60,5 +60,10 @@ public class TestLoginWithPOM {
         driver.findElement(day).sendKeys(date);
         driver.findElement(day).sendKeys(Keys.ENTER);
 
+    }
+    public void setSubject(String subject) {
+        executor.executeScript("arguments[0].click()", driver.findElement(subjectField));
+        driver.findElement(subjectField).sendKeys(subject);
+        driver.findElement(subjectField).sendKeys(Keys.ENTER);
     }
 }
