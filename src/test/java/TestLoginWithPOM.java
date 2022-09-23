@@ -1,3 +1,4 @@
+import org.junit.jupiter.api.Assertions;
 import org.openqa.selenium.*;
 import org.openqa.selenium.interactions.Actions;
 
@@ -23,6 +24,7 @@ public class TestLoginWithPOM {
     By stateField = By.xpath("//*[@id=\"react-select-3-input\"]");
     By cityField = By.xpath("//*[@id=\"react-select-4-input\"]");
     By submit = By.id("submit");
+    By successMessage = By.id("example-modal-sizes-title-lg");
 
     public TestLoginWithPOM(WebDriver driver) {
         this.driver = driver;
@@ -89,5 +91,11 @@ public class TestLoginWithPOM {
     public void setCity(String city) {
         driver.findElement(cityField).sendKeys(city);
         driver.findElement(cityField).sendKeys(Keys.ENTER);
+    }
+    public void clickSubmit() {
+        executor.executeScript("arguments[0].click()", driver.findElement(submit));
+    }
+    public void checkSuccess() {
+        Assertions.assertEquals("Thanks for submitting the form", driver.findElement(successMessage).getText());
     }
 }
