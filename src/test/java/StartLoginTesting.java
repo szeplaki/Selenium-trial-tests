@@ -29,5 +29,6 @@ public class StartLoginTesting {
         loginWithPOM.setEmail("szeplaki.eva1@gmail.com");
         loginWithPOM.setGender();
         loginWithPOM.setPhoneNumber("0123456789");
+        loginWithPOM.setDate("22 May 1982");
     }
 }
