@@ -1,9 +1,6 @@
 package CheckboxWithOldStyle;
 
-import org.junit.jupiter.api.Assertions;
-import org.junit.jupiter.api.BeforeAll;
-import org.junit.jupiter.api.BeforeEach;
-import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.*;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
@@ -76,6 +73,11 @@ public class TestCheckBox {
         System.out.println(icon);
 
         Assertions.assertEquals(excepted, icon);
+    }
 
+    @AfterEach
+    public void closeWindows() throws InterruptedException {
+        Thread.sleep(2000);
+        driver.close();
     }
 }

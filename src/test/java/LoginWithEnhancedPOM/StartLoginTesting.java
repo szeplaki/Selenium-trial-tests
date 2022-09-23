@@ -1,5 +1,6 @@
 package LoginWithEnhancedPOM;
 
+import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
@@ -44,6 +45,12 @@ public class StartLoginTesting {
         loginWithPOM.setCity("Karnal");
         loginWithPOM.clickSubmit();
         loginWithPOM.checkSuccess();
+    }
+
+    @AfterEach
+    public void closeWindows() throws InterruptedException {
+        Thread.sleep(2000);
+        driver.close();
     }
 
 }

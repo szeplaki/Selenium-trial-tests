@@ -1,9 +1,6 @@
 package ButtonClickWithOldStyle;
 
-import org.junit.jupiter.api.Assertions;
-import org.junit.jupiter.api.BeforeAll;
-import org.junit.jupiter.api.BeforeEach;
-import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.*;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -60,5 +57,10 @@ public class TestClicks {
         String actual = driver.findElement(By.id("dynamicClickMessage")).getText();
 
         Assertions.assertEquals(expected, actual);
+    }
+    @AfterEach
+    public void closeWindows() throws InterruptedException {
+        Thread.sleep(2000);
+        driver.close();
     }
 }

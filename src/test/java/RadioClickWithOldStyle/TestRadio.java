@@ -1,3 +1,5 @@
+package RadioClickWithOldStyle;
+
 import org.junit.jupiter.api.*;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
@@ -49,5 +51,9 @@ public class TestRadio {
         String excepted = "true";
         String actual = noRadio.getAttribute("disabled");
         Assertions.assertEquals(excepted, actual);
+    }
+    @AfterAll
+    public static void close() {
+        driver.quit();
     }
 }

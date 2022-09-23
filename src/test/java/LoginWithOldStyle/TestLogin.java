@@ -9,7 +9,7 @@ import org.openqa.selenium.interactions.Actions;
 public class TestLogin {
 
     @Test
-    public void TestLogin() {
+    public void TestLogin() throws InterruptedException {
         System.setProperty("webdriver.chrome.driver", "/home/szeplaki/Documents/ChromeDriver/chromedriver_linux64/chromedriver");
         WebDriver driver = new ChromeDriver();
         driver.get("https://demoqa.com/automation-practice-form");
@@ -37,7 +37,7 @@ public class TestLogin {
         actions.sendKeys(Keys.HOME).build().perform();
 
         actions.keyDown(Keys.LEFT_SHIFT);
-        for (int i = 0; i < query.length(); i++){
+        for (int i = 0; i < query.length(); i++) {
             actions.sendKeys(Keys.ARROW_RIGHT);
         }
         actions.keyUp(Keys.LEFT_SHIFT);
@@ -46,7 +46,7 @@ public class TestLogin {
         day.sendKeys(query); //beírja az új adatot
         day.sendKeys(Keys.ENTER);
 
-        JavascriptExecutor jse = (JavascriptExecutor)driver;
+        JavascriptExecutor jse = (JavascriptExecutor) driver;
 
         WebElement subject = driver.findElement(By.id("subjectsInput"));
         jse.executeScript("arguments[0].click()", subject);
@@ -91,5 +91,10 @@ public class TestLogin {
 
         String expected = "Thanks for submitting the form";
         Assertions.assertEquals(expected, actual);
+
+
+        Thread.sleep(2000);
+        driver.close();
+
     }
 }
