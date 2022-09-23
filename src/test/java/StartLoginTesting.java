@@ -37,5 +37,6 @@ public class StartLoginTesting {
         loginWithPOM.setReadingAsHobby();
         loginWithPOM.setMusicAsHobby();
         loginWithPOM.uploadFile("/home/szeplaki/Pictures/screenShot.png");
+        loginWithPOM.setAddress("Budapest, Hölgy utca 35. Fsz. 5.");
     }
 }

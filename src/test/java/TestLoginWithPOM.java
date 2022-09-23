@@ -19,9 +19,9 @@ public class TestLoginWithPOM {
     By sport = By.id("hobbies-checkbox-1");
     By reading = By.id("hobbies-checkbox-2");
     By music = By.id("hobbies-checkbox-3");
-    By address = By.id("currentAddress");
-    By state = By.xpath("//*[@id=\"react-select-3-input\"]");
-    By city = By.xpath("//*[@id=\"react-select-4-input\"]");
+    By addressField = By.id("currentAddress");
+    By stateField = By.xpath("//*[@id=\"react-select-3-input\"]");
+    By cityField = By.xpath("//*[@id=\"react-select-4-input\"]");
     By submit = By.id("submit");
 
     public TestLoginWithPOM(WebDriver driver) {
@@ -79,4 +79,8 @@ public class TestLoginWithPOM {
     public void uploadFile(String route) {
         driver.findElement(chooseFileButton).sendKeys(route);
     }
+    public void setAddress(String address) {
+        driver.findElement(addressField).sendKeys(address);
+    }
+
 }
