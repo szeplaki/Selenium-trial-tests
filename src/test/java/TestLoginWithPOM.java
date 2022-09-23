@@ -66,4 +66,14 @@ public class TestLoginWithPOM {
         driver.findElement(subjectField).sendKeys(subject);
         driver.findElement(subjectField).sendKeys(Keys.ENTER);
     }
+
+    public void setSportAsHobby() {
+        executor.executeScript("arguments[0].click()", driver.findElement(sport));
+    }
+    public void setReadingAsHobby() {
+        executor.executeScript("arguments[0].click()", driver.findElement(reading));
+    }
+    public void setMusicAsHobby() {
+        executor.executeScript("arguments[0].click()", driver.findElement(music));
+    }
 }

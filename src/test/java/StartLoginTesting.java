@@ -33,5 +33,8 @@ public class StartLoginTesting {
         loginWithPOM.setSubject("English");
         loginWithPOM.setSubject("Chemistry");
         loginWithPOM.setSubject("Computer Science");
+        loginWithPOM.setSportAsHobby();
+        loginWithPOM.setReadingAsHobby();
+        loginWithPOM.setMusicAsHobby();
     }
 }
