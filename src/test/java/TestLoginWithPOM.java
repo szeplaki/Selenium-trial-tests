@@ -82,5 +82,12 @@ public class TestLoginWithPOM {
     public void setAddress(String address) {
         driver.findElement(addressField).sendKeys(address);
     }
-
+    public void setState(String state) {
+        driver.findElement(stateField).sendKeys(state);
+        driver.findElement(stateField).sendKeys(Keys.ENTER);
+    }
+    public void setCity(String city) {
+        driver.findElement(cityField).sendKeys(city);
+        driver.findElement(cityField).sendKeys(Keys.ENTER);
+    }
 }
