@@ -12,7 +12,7 @@ public class TestLoginWithPOM {
     By emailField = By.id("userEmail");
     By userNumberField = By.id("userNumber");
 
-    By uploadPicture = By.id("uploadPicture");
+    By chooseFileButton = By.id("uploadPicture");
     By day = By.id("dateOfBirthInput");
     By subjectField = By.id("subjectsInput");
     By gender = By.xpath("(//input[@name='gender'])[2]");
@@ -75,5 +75,8 @@ public class TestLoginWithPOM {
     }
     public void setMusicAsHobby() {
         executor.executeScript("arguments[0].click()", driver.findElement(music));
+    }
+    public void uploadFile(String route) {
+        driver.findElement(chooseFileButton).sendKeys(route);
     }
 }

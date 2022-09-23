@@ -36,5 +36,6 @@ public class StartLoginTesting {
         loginWithPOM.setSportAsHobby();
         loginWithPOM.setReadingAsHobby();
         loginWithPOM.setMusicAsHobby();
+        loginWithPOM.uploadFile("/home/szeplaki/Pictures/screenShot.png");
     }
 }
